@@ -16,11 +16,11 @@ export default defineConfig({
     visionTool(),
     presentationTool({
       previewUrl: {
-        origin: process.env.SANITY_STUDIO_PREVIEW_ORIGIN,
+        origin: process.env.SANITY_STUDIO_PREVIEW_ORIGIN || 'https://applyit.in',
         preview: '/',
         previewMode: {
           enable: 'api/preview-mode/enable',
-          disable: '/api/preview-mode/disable',
+          disable: 'api/preview-mode/disable',
         },
       },
     }),
